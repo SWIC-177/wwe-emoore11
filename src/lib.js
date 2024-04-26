@@ -14,6 +14,7 @@
  * @param {RemoveCorrespondingItemsByTermArgs} args
  * @returns {Terms}
  */
+
 export function removeCorrespondingItemsByTerm({ terms1, terms2, filterTerm }) {
   return terms1.reduce(
     (accumulatedResults, term, index) => {
