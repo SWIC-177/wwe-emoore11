@@ -11,6 +11,7 @@
 export const BELTS = [
   "Undisputed WWE Champion",
   "World Heavyweight Champion",
+  "Women's World Champion",
   "WWE Women’s Champion",
   "Intercontinental Champion",
   "United States Champion",
@@ -27,6 +28,7 @@ export const BELTS = [
 export const CHAMPIONS = [
   "Cody Rhodes",
   "Damian Priest",
+  "Vacant Title",
   "Bayley",
   "Sami Zayn",
   "Logan Paul",

@@ -1,3 +1,13 @@
 import { BELTS, CHAMPIONS } from "./src/data";
 
-console.log(BELTS, CHAMPIONS);
+const beltsWithoutWomen = BELTS.filter(
+  (belt) => belt !== "Women's World Champion",
+);
+
+console.log(beltsWithoutWomen);
+
+const championsWithoutVacant = CHAMPIONS.filter(
+  (champion) => champion !== "Vacant Title",
+);
+
+console.log(championsWithoutVacant);
