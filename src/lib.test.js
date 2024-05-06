@@ -50,3 +50,7 @@ test("removeCorrespondingItemsByTerm", () => {
   expect(result.terms1).toEqual(expected.terms1);
   expect(result.terms2).toEqual(expected.terms2);
 });
+
+const result = merge2ArraysIntoAnArrayOfObjects({ a1, a2, key1, key2 });
+
+expect(result).toEqual(expectedLast);
