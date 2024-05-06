@@ -1,24 +1,18 @@
 import { describe, expect, test } from "vitest";
-import { removeCorrespondingItemsByTerm } from "./lib";
+import { getLastName, removeCorrespondingItemsByTerm } from "./lib";
 
-export function getLastName(fullName) {
-  const splitName = fullName.trim().split(" ");
-  return splitName[splitName.length - 1];
-}
-
+describe("getLastName");
 test("removeCorrespondingItemsByTerm", () => {
   // Arrange
 
   describe("getLastName", () => {
     // Arrange
     const fullName = "John Doe";
-    const expectedLastName = "Doe";
+    const expected = "Doe";
 
-    // Act
-    const actualLastName = getLastName(fullName);
+    const result = getLastName(fullName);
 
-    // Assert
-    expect(actualLastName).toBe(expectedLastName);
+    expect(result).toBe(expected);
   });
 
   const terms1 = ["term1", "term2", "term3"];
@@ -29,6 +23,24 @@ test("removeCorrespondingItemsByTerm", () => {
     terms1: ["term1", "term3"],
     terms2: ["corresponding1", "corresponding3"],
   };
+
+  test("returns the last name of a full name", () => {
+    const fullName = "John Doe";
+    const expectedLast = "Doe";
+
+    const result = getLastName(fullName);
+
+    expect(result).toBe(expectedLast);
+  }); // Add closing parenthesis here
+
+  test("returns the last name from a full name with special characters", () => {
+    const fullName = "John O'Doe";
+    const expectedLast = "O'Doe";
+
+    const result = getLastName(fullName);
+
+    expect(result).toBe(expectedLast);
+  });
 
   // Act
   const result = removeCorrespondingItemsByTerm({ terms1, terms2, filterTerm });

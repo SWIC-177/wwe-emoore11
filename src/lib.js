@@ -1,10 +1,15 @@
-export function getLastName(fullNaame) {
-  const splitName = fullNaame.trim().split(" ");
+export function getLastName(fullName) {
+  const splitName = fullName.trim().split(" ");
   return splitName[splitName.length - 1];
 }
 
-export function removeCorrespondingItemsByTerm({
-  terms1,
-  terms2,
-  filterTerm,
-}) {}
+export function merge2ArraysIntoAnArrayOfObjects({ a1, a2, key1, key2 }) {
+  // Function implementation
+}
+
+export function removeCorrespondingItemsByTerm({ terms1, terms2, filterTerm }) {
+  const index = terms1.indexOf(filterTerm);
+  terms1.splice(index, 1);
+  terms2.splice(index, 1);
+  return { terms1, terms2 };
+}
